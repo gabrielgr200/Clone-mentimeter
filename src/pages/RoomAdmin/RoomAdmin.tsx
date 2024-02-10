@@ -68,27 +68,28 @@ export function RoomAdmin() {
             </header>
 
             {openIsModal && (
-                <div className="modal-overlay" onClick={handleCloseModal}>
+                <motion.div initial='hidden' animate='visible' className="modal-overlay" onClick={handleCloseModal}>
                     <div className="modal-container" onClick={(e) => e.stopPropagation()}>
                         <div className="modal-header">
-                            <button className="close-button" onClick={handleCloseModal}>
+                            <motion.button variants={slideInFromLeft(0.5)} className="close-button" onClick={handleCloseModal}>
                                 <img src={close} alt="botão de fechar modal" />
-                            </button>
+                            </motion.button>
                         </div>
                         <div className="modal-content">
-                            <img
+                            <motion.img
+                                variants={slideInFromLeft(0.8)}
                                 src={isHovered ? trashOpen : trashClose}
                                 alt="botão de fechar modal"
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                             />
-                            <h2>Tem certeza que deseja encerrar a sala?</h2>
+                            <motion.h2 variants={slideInFromLeft(1.1)}>Tem certeza que deseja encerrar a sala?</motion.h2>
                             <div className="modal-footer">
-                                <button className="button-delete" onClick={handleEndRoom}>Encerrar</button>
+                                <motion.button variants={slideInFromLeft(1.5)} className="button-delete" onClick={handleEndRoom}>Encerrar</motion.button>
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             )}
 
             <main>
