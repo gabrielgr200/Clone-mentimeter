@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+$font-family-inter: 'Inter', sans-serif;
+$font-family-roboto: 'Roboto', sans-serif;
+$font-family-poppins: 'Poppins', sans-serif; 
+
+.question {
+    background: #fefefe;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+
+    & + .question {
+        margin-top: 8px;
+    }
+
+    p {
+        color: #29292e;
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 24px;
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+
+        span {
+            margin-left: 8px;
+            color: #737380;
+            font-family: $font-family-inter;
+            font-size: 14px;
+        }
+    }
+
+
+    button {
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        transition: filter 0.2s;
+
+        &.like-button {
+            display: flex;
+            align-items: flex-end;
+            color: #737380;
+            gap: 8px;
+
+            &.liked {
+                color: #196CFF;
+
+                svg path {
+                    stroke: #196CFF;
+                }
+            }
+        }
+
+        &:hover {
+            filter: brightness(0.6);
+        }
+    }
+
+}

@@ -20,6 +20,15 @@ $font-family-poppins: 'Poppins', sans-serif;
             > img {
                 max-height: 45px;
             }
+
+            > div {
+                gap: 16px;
+                display: flex;
+
+                button {
+                    height: 40px;
+                }
+            }
         }
     }
 
@@ -110,6 +119,11 @@ $font-family-poppins: 'Poppins', sans-serif;
                 }
         
             }
+        }
+
+        .question-list {
+            margin-top: 32px;
+            margin-bottom: 20px;
         }
     }
 }

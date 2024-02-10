@@ -38,6 +38,11 @@ export function Home() {
             return;
         }
 
+        if (roomRef.val().endedAt) {
+            toast.error("Esta sala já está fechada.");
+            return;
+        }
+
         navigate(`/new/${roomCod}`);
     }
 

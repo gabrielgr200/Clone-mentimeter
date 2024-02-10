@@ -24,6 +24,12 @@ $font-family-poppins: 'Poppins', sans-serif;
         margin-right: 8px;
     }
 
+    &.outlined {
+        background: #fff;
+        border: 1px solid #FF80AB;
+        color: #e24e80;
+    }
+
     &:not(:disabled):hover {
         filter: brightness(0.9);
     }
