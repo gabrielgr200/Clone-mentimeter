@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+$font-family-inter: 'Inter', sans-serif;
+$font-family-roboto: 'Roboto', sans-serif;
+$font-family-poppins: 'Poppins', sans-serif; 
+
+.room-code {
+  height: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  
+  background: #FFF;
+  border: 1px solid #196CFF;
+  cursor: pointer;
+  
+  display: flex;
+
+  div {
+    background: #196CFF;
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span {
+    display: block;
+    align-self: center;
+    flex: 1;
+    padding: 0 16px 0 12px;
+    width: 230px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

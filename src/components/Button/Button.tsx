@@ -1,10 +1,12 @@
-import { ButtonHTMLAttributes } from 'react';
 import '../../styles/button.scss';
+import { MotionProps, motion } from 'framer-motion';
+import { ButtonHTMLAttributes } from 'react';
+import { slideInFromRight } from '../../utils/motion';
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & MotionProps;
 
 export function Button (props: ButtonProps) {
   return (
-    <button className="button" {...props} />
+    <motion.button variants={slideInFromRight(1.3)} className="button" {...props} />
   );
 }
